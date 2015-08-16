@@ -1,14 +1,13 @@
-package MooseX::Types::LoadableClass;
-# git description: v0.012-13-gcdaf68a
-$MooseX::Types::LoadableClass::VERSION = '0.013';
+package MooseX::Types::LoadableClass; # git description: v0.013-12-g14cfc61
 # ABSTRACT: ClassName type constraint with coercion to load the class.
 # KEYWORDS: moose types constraints class classes role roles module modules
+
+our $VERSION = '0.014';
 
 use strict;
 use warnings;
 use MooseX::Types -declare => [qw/ ClassName LoadableClass LoadableRole /];
 use MooseX::Types::Moose qw(Str RoleName), ClassName => { -as => 'MooseClassName' };
-use Moose::Util::TypeConstraints;
 use Module::Runtime qw(is_module_name use_package_optimistically);
 use if MooseX::Types->VERSION >= 0.42, 'namespace::autoclean';
 
@@ -52,7 +51,7 @@ MooseX::Types::LoadableClass - ClassName type constraint with coercion to load t
 
 =head1 VERSION
 
-version 0.013
+version 0.014
 
 =head1 SYNOPSIS
 
@@ -97,13 +96,6 @@ Like C<LoadableClass>, except the loaded package must be a L<Moose::Role>.
 
 Tomas Doran <bobtfish@bobtfish.net>
 
-=head1 COPYRIGHT AND LICENSE
-
-This software is copyright (c) 2010 by Infinity Interactive, Inc.
-
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
-
 =head1 CONTRIBUTORS
 
 =for stopwords Karen Etheridge Dagfinn Ilmari Mannsåker Florian Ragwitz Сергей Романов
@@ -127,5 +119,12 @@ Florian Ragwitz <rafl@debian.org>
 Сергей Романов <sromanov@cpan.org>
 
 =back
+
+=head1 COPYRIGHT AND LICENCE
+
+This software is copyright (c) 2010 by Infinity Interactive, Inc.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut

@@ -1,5 +1,8 @@
 Revision history for MooseX-Types-LoadableClass
 
+0.014     2015-08-16 02:03:26Z
+  - update some distribution tooling
+
 0.013     2014-11-16 21:29:04Z
   - switch from Class::Load to Module::Runtime for loading modules
 
